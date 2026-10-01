@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Astra Grid</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div>
+            <h1>ASTRA GRID</h1>
+            <p>Smart Campus Energy & Environment System</p>
+        </div>
+
+        <!-- LIVE SYSTEM STATUS -->
+
+        <div class="system-status">
+
+            <span id="statusDot" class="status-dot online"></span>
+
+            <span id="systemStatus">
+                ONLINE
+            </span>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= SENSOR DASHBOARD ================= -->
+
+    <main class="dashboard">
+
+
+        <!-- OCCUPANCY -->
+
+        <div class="card">
+
+            <div class="card-title">
+                <span>👤</span>
+                <h2>Occupancy</h2>
+            </div>
+
+            <div class="value" id="occupancy">
+                DETECTED
+            </div>
+
+            <p class="description">
+                PIR motion sensor
+            </p>
+
+        </div>
+
+
+        <!-- TEMPERATURE -->
+
+        <div class="card">
+
+            <div class="card-title">
+                <span>🌡️</span>
+                <h2>Temperature</h2>
+            </div>
+
+            <div class="value">
+
+                <span id="temperature">
+                    29.6
+                </span>
+
+                <span class="unit">
+                    °C
+                </span>
+
+            </div>
+
+            <p class="description">
+                DHT11 sensor
+            </p>
+
+        </div>
+
+
+        <!-- HUMIDITY -->
+
+        <div class="card">
+
+            <div class="card-title">
+                <span>💧</span>
+                <h2>Humidity</h2>
+            </div>
+
+            <div class="value">
+
+                <span id="humidity">
+                    64.7
+                </span>
+
+                <span class="unit">
+                    %
+                </span>
+
+            </div>
+
+            <p class="description">
+                DHT11 sensor
+            </p>
+
+        </div>
+
+
+        <!-- LIGHT LEVEL -->
+
+        <div class="card">
+
+            <div class="card-title">
+                <span>☀️</span>
+                <h2>Light Level</h2>
+            </div>
+
+            <div class="value" id="ldr">
+                953
+            </div>
+
+            <p class="description">
+                LDR sensor
+            </p>
+
+        </div>
+
+
+        <!-- LIGHTING -->
+
+        <div class="card">
+
+            <div class="card-title">
+                <span>💡</span>
+                <h2>Lighting</h2>
+            </div>
+
+            <div class="value" id="lighting">
+                ON
+            </div>
+
+            <p class="description">
+                Automatic control
+            </p>
+
+        </div>
+
+
+        <!-- COOLING -->
+
+        <div class="card">
+
+            <div class="card-title">
+                <span>❄️</span>
+                <h2>Cooling</h2>
+            </div>
+
+            <div class="value" id="cooling">
+                NOT REQUIRED
+            </div>
+
+            <p class="description">
+                Temperature decision
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= DECISION ENGINE ================= -->
+
+    <section class="decision-panel">
+
+        <h2>
+            Astra Grid Decision Engine
+        </h2>
+
+        <div class="decision">
+
+
+            <!-- OCCUPANCY DECISION -->
+
+            <div>
+
+                <span class="decision-label">
+                    Occupancy
+                </span>
+
+                <span id="decisionOccupancy">
+                    Detected
+                </span>
+
+            </div>
+
+
+            <!-- LIGHTING DECISION -->
+
+            <div>
+
+                <span class="decision-label">
+                    Lighting
+                </span>
+
+                <span id="decisionLighting">
+                    ON
+                </span>
+
+            </div>
+
+
+            <!-- COOLING DECISION -->
+
+            <div>
+
+                <span class="decision-label">
+                    Cooling
+                </span>
+
+                <span id="decisionCooling">
+                    Not Required
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            ASTRA GRID | Smart Campus Automation
+        </p>
+
+        <p id="lastUpdated">
+            Last updated: --
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,335 @@
+/* =====================================
+   ASTRA GRID
+   SMART CAMPUS DASHBOARD
+   ===================================== */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =====================================
+   BODY
+   ===================================== */
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    background: #f4f7fb;
+
+    color: #1f2937;
+
+}
+
+
+/* =====================================
+   HEADER
+   ===================================== */
+
+.header {
+
+    background: #111827;
+
+    color: white;
+
+    padding: 25px 40px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+.header h1 {
+
+    font-size: 30px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.header p {
+
+    margin-top: 6px;
+
+    color: #cbd5e1;
+
+}
+
+
+/* =====================================
+   LIVE SYSTEM STATUS
+   ===================================== */
+
+.system-status {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-weight: bold;
+
+}
+
+
+/* Status dot */
+
+.status-dot {
+
+    width: 11px;
+
+    height: 11px;
+
+    border-radius: 50%;
+
+    display: inline-block;
+
+}
+
+
+/* ONLINE */
+
+.status-dot.online {
+
+    background: #22c55e;
+
+    box-shadow: 0 0 8px #22c55e;
+
+}
+
+
+/* OFFLINE */
+
+.status-dot.offline {
+
+    background: #ef4444;
+
+    box-shadow: 0 0 8px #ef4444;
+
+}
+
+
+/* =====================================
+   DASHBOARD
+   ===================================== */
+
+.dashboard {
+
+    padding: 35px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+
+}
+
+
+/* =====================================
+   CARDS
+   ===================================== */
+
+.card {
+
+    background: white;
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.07);
+
+    min-height: 170px;
+
+}
+
+
+.card-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.card-title span {
+
+    font-size: 25px;
+
+}
+
+
+.card-title h2 {
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+}
+
+
+.value {
+
+    font-size: 32px;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+
+}
+
+
+.unit {
+
+    font-size: 18px;
+
+    font-weight: normal;
+
+}
+
+
+.description {
+
+    color: #64748b;
+
+    font-size: 14px;
+
+}
+
+
+/* =====================================
+   DECISION PANEL
+   ===================================== */
+
+.decision-panel {
+
+    margin: 0 35px 30px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.07);
+
+}
+
+
+.decision-panel h2 {
+
+    margin-bottom: 20px;
+
+    font-size: 20px;
+
+}
+
+
+.decision {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.decision > div {
+
+    background: #f8fafc;
+
+    padding: 18px;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+}
+
+
+.decision-label {
+
+    font-weight: 600;
+
+}
+
+
+#decisionOccupancy,
+#decisionLighting,
+#decisionCooling {
+
+    font-weight: bold;
+
+}
+
+
+/* =====================================
+   FOOTER
+   ===================================== */
+
+footer {
+
+    text-align: center;
+
+    padding: 20px;
+
+    color: #64748b;
+
+    font-size: 13px;
+
+}
+
+
+/* =====================================
+   MOBILE
+   ===================================== */
+
+@media (max-width: 800px) {
+
+    .dashboard {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .decision {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+
+    }
+
+}
