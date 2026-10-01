@@ -60,71 +60,6 @@ Astra Grid provides a simple integrated approach:
                   │ Live Monitoring     │
                   │ Decision Status     │
                   └─────────────────────┘
-Absolutely. Here is a **GitHub-ready README** for your actual Astra Grid project. You can copy this directly into `README.md`.
-
-````markdown
-# 🚀 Astra Grid – Smart Campus Energy & Environment System
-
-Astra Grid is an ESP32-based smart campus automation prototype designed to monitor environmental conditions and occupancy and make local decisions for lighting and cooling.
-
-The system combines **embedded hardware, sensors, serial communication, Python Flask, APIs, and a live web dashboard** into a single working system.
-
----
-
-## 📌 Project Overview
-
-Traditional campus automation systems often depend on manual control or separate monitoring systems.
-
-Astra Grid provides a simple integrated approach:
-
-- Detects human presence using a PIR sensor
-- Measures ambient light using an LDR
-- Monitors temperature and humidity using a DHT11
-- Automatically controls a lighting indicator based on occupancy and light level
-- Determines whether cooling is required based on temperature
-- Sends live sensor data from ESP32 to a Python Flask backend
-- Displays the information on a real-time web dashboard
-
----
-
-## 🧠 System Architecture
-
-```text
-                  ┌─────────────────────┐
-                  │       Sensors       │
-                  │                     │
-                  │  PIR    LDR   DHT11 │
-                  └──────────┬──────────┘
-                             │
-                             ▼
-                  ┌─────────────────────┐
-                  │        ESP32        │
-                  │                     │
-                  │ Sensor Processing   │
-                  │ Decision Logic      │
-                  └──────────┬──────────┘
-                             │
-                     Serial Communication
-                             │
-                             ▼
-                  ┌─────────────────────┐
-                  │   Python + Flask    │
-                  │                     │
-                  │ Serial Data Reader  │
-                  │ REST API            │
-                  └──────────┬──────────┘
-                             │
-                          JSON Data
-                             │
-                             ▼
-                  ┌─────────────────────┐
-                  │    Web Dashboard    │
-                  │                     │
-                  │ HTML + CSS + JS     │
-                  │                     │
-                  │ Live Monitoring     │
-                  │ Decision Status     │
-                  └─────────────────────┘
 ````
 
 ---
@@ -298,27 +233,7 @@ Example JSON response:
 
 ---
 
-## 📁 Project Structure
 
-```text
-AstraGrid/
-│
-├── app.py
-│
-├── templates/
-│   └── dashboard.html
-│
-├── static/
-│   ├── style.css
-│   └── script.js
-│
-├── firmware/
-│   └── astra_grid.ino
-│
-└── images/
-    ├── hardware.jpg
-    └── dashboard.png
-```
 
 ---
 
